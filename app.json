@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "binanCrypto",
+    "slug": "binanCrypto",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
