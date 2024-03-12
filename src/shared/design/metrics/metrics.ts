@@ -20,6 +20,9 @@ export const METRICS = {
   PADDING: {
     MD: RFValue(24),
   },
+  MARGIN: {
+    SM: RFValue(8),
+  },
 }
 
 export type METRICS_TYPE = typeof METRICS
