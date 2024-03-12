@@ -10,21 +10,27 @@ import {
   ContainerNameCypto,
 } from './card-crypto.styles'
 
-const CardCrypto: React.FC = () => {
+type CardCryptoProps = {
+  data: CryptoModel
+}
+
+const CardCrypto: React.FC<CardCryptoProps> = ({ data }) => {
   return (
     <Container>
       <Content>
-        <CryptoIcon />
+        <CryptoIcon cryptoId={data.id} />
         <ContainerNameCypto>
-          <SymbolsCrypto variant="H2">Bitcoin</SymbolsCrypto>
-          <SymbolsCrypto variant="P1">BTC</SymbolsCrypto>
+          <SymbolsCrypto variant="H2">{data?.name}</SymbolsCrypto>
+          <SymbolsCrypto variant="P1">{data?.symbol}</SymbolsCrypto>
         </ContainerNameCypto>
       </Content>
 
       <LineChartCrypto />
 
       <ContainerPriceCypto>
-        <SymbolsCrypto variant="H2">R$ 10.569,00</SymbolsCrypto>
+        <SymbolsCrypto variant="H2">
+          $ {parseFloat(data?.priceUsd ?? 0).toFixed(2)}
+        </SymbolsCrypto>
         <CardPercentageCrypto />
       </ContainerPriceCypto>
     </Container>

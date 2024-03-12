@@ -1,0 +1,17 @@
+export const ICONS_ID_MAP = [
+  'bitcoin-cash',
+  'bitcoin',
+  'cardano',
+  'dash',
+  'eos',
+  'ethereum-classic',
+  'ethereum',
+  'iota',
+  'litecoin',
+  'monero',
+  'neo',
+  'ripple',
+  'stellar',
+  'tether',
+  'tron',
+]
