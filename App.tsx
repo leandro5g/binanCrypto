@@ -23,6 +23,7 @@ export default function App() {
   })
 
   if (fontLoaded) {
-    ;<MyApp />
+    SplashScreen.hideAsync()
+    return <MyApp />
   }
 }
