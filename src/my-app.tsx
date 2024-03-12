@@ -1,7 +1,12 @@
-import { SplashScreen } from './modules/un-logged/pages/splash-screen/splash-screen.page'
+import { Home } from './modules/home/pages/home/home.page'
+import { AppProvider } from './shared/providers/app-provider'
 
 const MyApp: React.FC = () => {
-  return <SplashScreen />
+  return (
+    <AppProvider>
+      <Home />
+    </AppProvider>
+  )
 }
 
 export { MyApp }
