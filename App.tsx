@@ -1,3 +1,5 @@
+import 'react-native-gesture-handler'
+
 /* eslint-disable camelcase */
 import { MyApp } from 'app/my-app'
 
