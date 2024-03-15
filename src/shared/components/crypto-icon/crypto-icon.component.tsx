@@ -1,21 +1,25 @@
-import Crypto from 'rn-crypto-icons-svg'
-
-import { MAP_ICON } from 'app/shared/assets/cryptos-svg'
-import { Container } from './crypto-icon.styles'
 import { RFValue } from 'app/shared/libs/font-size/font-size'
 
+import { MAP_ICON } from 'app/shared/assets/cryptos-svg'
+
+export type CryptoKeyIcon = keyof typeof MAP_ICON
+
 type CryptoIconProps = {
-  cryptoId: string
+  cryptoId: CryptoKeyIcon
+  size?: 'MD' | 'LG'
 }
 
-const CryptoIcon: React.FC<CryptoIconProps> = ({ cryptoId }) => {
+const ICON_SIZE = {
+  MD: RFValue(40),
+  LG: RFValue(100),
+}
+
+const CryptoIcon: React.FC<CryptoIconProps> = ({ cryptoId, size = 'MD' }) => {
   const Icon = MAP_ICON[cryptoId]
 
-  return (
-    <Container>
-      {Icon && <Crypto height={RFValue(40)} width={RFValue(40)} />}
-    </Container>
-  )
+  if (!Icon) return null
+
+  return <Icon width={ICON_SIZE[size]} height={ICON_SIZE[size]} />
 }
 
 export { CryptoIcon }

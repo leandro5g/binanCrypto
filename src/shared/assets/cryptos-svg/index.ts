@@ -15,19 +15,15 @@ import Tether from './tether.svg'
 import Tron from './tron.svg'
 
 export const MAP_ICON = {
-  'bitcoin-cash': BitcoinCash,
-  'ethereum-classic': EthereumClassic,
   bitcoin: Bitcoin,
-  cardano: Cardano,
-  dash: Dash,
-  eos: Eos,
   ethereum: Ethereum,
+  eos: Eos,
+  'ethereum-classic': EthereumClassic,
   iota: Iota,
+  stellar: Stellar,
   litecoin: Litecoin,
   monero: Monero,
-  neon: Neon,
   ripple: Ripple,
-  stellar: Stellar,
   tether: Tether,
   tron: Tron,
 }
