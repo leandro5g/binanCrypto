@@ -13,6 +13,5 @@ export const IconArrowPercentage = styled(Feather).attrs(() => ({
 }))``
 
 export const TextPercentage = styled(TextDefault)`
-  color: #30e0a1;
-  margin-left: ${RFValue(4)}px;
+  margin-left: ${({ theme }) => theme.METRICS.MARGIN.x4}px;
 `

@@ -1,14 +1,39 @@
+import { useTheme } from 'styled-components/native'
 import {
   Container,
   IconArrowPercentage,
   TextPercentage,
 } from './card-percentage-crypto.styles'
 
-const CardPercentageCrypto: React.FC = () => {
+type CardPercentageCryptoProps = {
+  variantPercentage: string
+  hasIncreased: boolean
+  hasKeep: boolean
+}
+
+const CardPercentageCrypto: React.FC<CardPercentageCryptoProps> = ({
+  variantPercentage,
+  hasIncreased,
+  hasKeep,
+}) => {
+  const { COLORS } = useTheme()
+
+  const getColor = hasKeep
+    ? COLORS.DARK[100]
+    : hasIncreased
+      ? COLORS.GRAPHIC_COLOR.INCREASED
+      : COLORS.GRAPHIC_COLOR.DECREASED
+
+  const iconPercentage = hasIncreased ? 'arrow-up-right' : 'arrow-down-left'
+
   return (
     <Container>
-      <IconArrowPercentage color="#30E0A1" name="arrow-up-right" />
-      <TextPercentage>+20.2%</TextPercentage>
+      {!hasKeep && (
+        <IconArrowPercentage color={getColor} name={iconPercentage} />
+      )}
+      <TextPercentage style={{ color: getColor }}>
+        {variantPercentage}
+      </TextPercentage>
     </Container>
   )
 }
