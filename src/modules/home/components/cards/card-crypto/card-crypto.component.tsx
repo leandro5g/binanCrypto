@@ -8,14 +8,14 @@ import { BaseModalRef } from 'app/shared/components/modals/base-modal/base-modal
 import { InfoCrypto } from './modules/info-crypto/info-crypto.module'
 import { PriceCrypto } from './modules/price-crypto/price-crypto.module'
 import { LineStickChart } from '../../graphics/line-stick-chart/line-stick-chart.component'
-
-import { Container } from './card-crypto.styles'
+import { ContainerAnimated } from './modules/container-animated/container-animated.module'
 
 type CardCryptoProps = {
   data: CryptoModel
+  index: number
 }
 
-const CardCrypto: React.FC<CardCryptoProps> = ({ data }) => {
+const CardCrypto: React.FC<CardCryptoProps> = ({ data, index }) => {
   const keyCrypto = data?.name.toLowerCase()
   const initialPrice = data?.priceUsd ?? '0'
 
@@ -37,12 +37,12 @@ const CardCrypto: React.FC<CardCryptoProps> = ({ data }) => {
   }, [])
 
   return (
-    <Container onPress={onPressCardCrypto}>
+    <ContainerAnimated index={index} onPress={onPressCardCrypto}>
       <InfoCrypto id={data?.id} name={data?.name} symbol={data?.symbol} />
       <LineStickChart priceOpen={priceOpen} cryptoPrices={cryptoPrices} />
       <PriceCrypto prices={prices} changePercentage={data?.changePercent24Hr} />
       <ModalCryptoInfo ref={refModalCryptoInfo} />
-    </Container>
+    </ContainerAnimated>
   )
 }
 
