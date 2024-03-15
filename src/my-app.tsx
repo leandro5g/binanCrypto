@@ -1,10 +1,10 @@
-import { Home } from './modules/home/pages/home/home.page'
 import { AppProvider } from './shared/providers/app-provider'
+import { Routes } from './shared/routes'
 
 const MyApp: React.FC = () => {
   return (
     <AppProvider>
-      <Home />
+      <Routes />
     </AppProvider>
   )
 }

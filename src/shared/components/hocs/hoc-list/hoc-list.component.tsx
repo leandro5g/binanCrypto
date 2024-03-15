@@ -6,6 +6,7 @@ import { Container, List } from './hoc-list.styles'
 
 type ElementProps<T> = {
   data: T
+  index: number
 }
 
 type HocListProps<T, R> = {
@@ -16,8 +17,8 @@ type HocListProps<T, R> = {
 function hocList<P, R>({ element: Element, fetcher }: HocListProps<P, R>) {
   const { data } = fetcher()
 
-  const renderItem = useCallback(({ item }: ListRenderItemInfo<P>) => {
-    return <Element data={item} />
+  const renderItem = useCallback(({ item, index }: ListRenderItemInfo<P>) => {
+    return <Element index={index} data={item} />
   }, [])
 
   return (
