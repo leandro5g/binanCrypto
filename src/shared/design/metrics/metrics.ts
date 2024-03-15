@@ -9,19 +9,22 @@ export const METRICS = {
     width,
   },
   FONT_SIZE: {
-    SM: RFValue(12),
-    MD: RFValue(14),
-    LG: RFValue(18),
-    XL: RFValue(24),
+    x12: RFValue(12),
+    x14: RFValue(14),
+    x18: RFValue(18),
+    x24: RFValue(24),
+    X16: RFValue(16),
   },
   ICONS: {
     MD: RFValue(28),
   },
   PADDING: {
-    MD: RFValue(24),
+    x8: RFValue(8),
+    x24: RFValue(24),
   },
   MARGIN: {
-    SM: RFValue(8),
+    x4: RFValue(4),
+    x8: RFValue(8),
   },
 }
 

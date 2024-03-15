@@ -1,20 +1,15 @@
-import { hocList } from 'app/shared/components/hocs/hoc-list/hoc-list.component'
-import { CardCrypto } from '../../components/cards/card-crypto/card-crypto.component'
-
-import {
-  getAssetsCryptoService,
-  AssetsCryptoResponse,
-} from '../../services/get-assets-crypto'
+import { AppHeader } from 'app/shared/components/headers/app-header/app-header.component'
+import { ListCryptos } from './components/list-cryptos/list-cryptos.component'
 
 import { Container } from './home.styles'
 
 const Home: React.FC = () => {
-  const ListCrypto = hocList<CryptoModel, AssetsCryptoResponse>({
-    element: CardCrypto,
-    fetcher: getAssetsCryptoService,
-  })
-
-  return <Container>{ListCrypto}</Container>
+  return (
+    <Container>
+      <AppHeader title="Markets" />
+      <ListCryptos />
+    </Container>
+  )
 }
 
 export { Home }

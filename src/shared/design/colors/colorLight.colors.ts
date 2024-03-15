@@ -11,4 +11,8 @@ export const COLOR_LIGHT = {
   DARK: {
     100: '#17171A',
   },
+  GRAPHIC_COLOR: {
+    INCREASED: '#30E0A1',
+    DECREASED: '#F6543E',
+  },
 }
