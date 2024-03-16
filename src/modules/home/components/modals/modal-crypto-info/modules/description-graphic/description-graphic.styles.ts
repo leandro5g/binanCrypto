@@ -6,4 +6,5 @@ export const ContainerAnimated = Animated.createAnimatedComponent(View)
 
 export const Container = styled(ContainerAnimated)`
   padding: 0px ${({ theme }) => theme.METRICS.PADDING.x8}px;
+  margin-top: ${({ theme }) => theme.METRICS.MARGIN.x12}px;
 `

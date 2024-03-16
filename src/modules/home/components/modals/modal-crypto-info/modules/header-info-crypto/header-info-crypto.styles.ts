@@ -1,7 +1,6 @@
 import { View } from 'react-native'
 
 import { TextDefault } from 'app/shared/components/texts/text-default/text-default.component'
-import { RFValue } from 'app/shared/libs/font-size/font-size'
 import styled from 'styled-components/native'
 import Animated from 'react-native-reanimated'
 
@@ -12,7 +11,7 @@ export const Container = styled(ContainerAnimated)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: ${RFValue(12)}px;
+  margin: ${({ theme }) => theme.METRICS.MARGIN.x12}px 0px;
 `
 
 export const Content = styled.View`

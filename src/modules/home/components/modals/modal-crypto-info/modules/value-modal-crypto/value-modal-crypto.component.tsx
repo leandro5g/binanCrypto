@@ -1,23 +1,37 @@
-import { formatterDollar } from 'app/shared/utils/masks/formatter-dollar'
-import { Container, PriceCrypto } from './value-modal-crypto.styles'
 import { useCryptoPricesStore } from 'app/modules/home/stores/useCryptoPricesStore'
+import { useTheme } from 'styled-components/native'
+
+import { maskDollar } from 'app/shared/utils/masks/mask-dollar'
+
+import { Container, PriceCrypto } from './value-modal-crypto.styles'
 
 type ValueModalCryptoProps = {
   nameCripto: string
 }
 
 const ValueModalCrypto: React.FC<ValueModalCryptoProps> = ({ nameCripto }) => {
+  const { COLORS } = useTheme()
+
   const keyCripto = nameCripto?.toLowerCase()
   const [cryptoPrices] = useCryptoPricesStore((state) => [
     state.cryptoPrices?.[keyCripto],
   ])
 
   const parseCryptoPrice = parseFloat(cryptoPrices?.[cryptoPrices?.length - 1])
+  const parseLastCryptoPrice = parseFloat(
+    cryptoPrices?.[cryptoPrices?.length - 2],
+  )
+
+  const hasIncreased = parseCryptoPrice > parseLastCryptoPrice
+
+  const colorPrice = hasIncreased
+    ? COLORS.GRAPHIC_COLOR.INCREASED
+    : COLORS.GRAPHIC_COLOR.DECREASED
 
   return (
     <Container>
-      <PriceCrypto variant="H2">
-        {formatterDollar.format(parseCryptoPrice)}
+      <PriceCrypto style={{ color: colorPrice }} variant="H2">
+        {maskDollar(parseCryptoPrice, 6)}
       </PriceCrypto>
     </Container>
   )

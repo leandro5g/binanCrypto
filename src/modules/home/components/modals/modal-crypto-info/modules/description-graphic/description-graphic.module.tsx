@@ -8,8 +8,9 @@ const DescriptionGraphic: React.FC = () => {
   return (
     <Container entering={SlideInRight.duration(600).delay(200)}>
       <TextDefault variant="P1">
-        Este gráfico representa as transações em tempo real do par de negociação
-        selecionado, exibindo movimentos de preço e volumes de comércio.
+        Este gráfico de candlestick exibe o preço de abertura, fechamento,
+        máximo e mínimo de um ativo. Velas verdes indicam aumento de preço,
+        enquanto velas vermelhas indicam queda.
       </TextDefault>
     </Container>
   )

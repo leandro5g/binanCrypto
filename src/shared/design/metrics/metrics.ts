@@ -25,6 +25,7 @@ export const METRICS = {
   MARGIN: {
     x4: RFValue(4),
     x8: RFValue(8),
+    x12: RFValue(12),
   },
 }
 

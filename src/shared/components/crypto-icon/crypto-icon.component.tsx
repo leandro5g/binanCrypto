@@ -11,7 +11,7 @@ type CryptoIconProps = {
 
 const ICON_SIZE = {
   MD: RFValue(40),
-  LG: RFValue(100),
+  LG: RFValue(48),
 }
 
 const CryptoIcon: React.FC<CryptoIconProps> = ({ cryptoId, size = 'MD' }) => {
