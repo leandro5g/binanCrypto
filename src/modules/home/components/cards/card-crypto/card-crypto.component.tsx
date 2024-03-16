@@ -41,7 +41,7 @@ const CardCrypto: React.FC<CardCryptoProps> = ({ data, index }) => {
       <InfoCrypto id={data?.id} name={data?.name} symbol={data?.symbol} />
       <LineStickChart priceOpen={priceOpen} cryptoPrices={cryptoPrices} />
       <PriceCrypto prices={prices} changePercentage={data?.changePercent24Hr} />
-      <ModalCryptoInfo ref={refModalCryptoInfo} />
+      <ModalCryptoInfo data={data} ref={refModalCryptoInfo} />
     </ContainerAnimated>
   )
 }

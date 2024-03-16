@@ -9,4 +9,5 @@ export const ICONS_ID_MAP = [
   'ripple',
   'tether',
   'tron',
+  'dogecoin',
 ]
