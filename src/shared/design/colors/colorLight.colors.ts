@@ -1,12 +1,14 @@
 export const COLOR_LIGHT = {
   BRAND: {
-    100: '#F6543E',
+    100: '#4B8E96',
   },
   NEUTRAL: {
     100: '#9DA3B7',
+    200: '#B9C1D9',
   },
   BASE: {
     100: '#ffffff',
+    200: '#F9F9FB',
   },
   DARK: {
     100: '#17171A',

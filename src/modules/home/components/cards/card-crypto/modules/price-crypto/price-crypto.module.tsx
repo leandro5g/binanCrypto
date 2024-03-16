@@ -1,5 +1,5 @@
 import { calcVariationPercentage } from 'app/modules/home/utils/calcs/calc-variation-percentage'
-import { formatterDollar } from 'app/shared/utils/masks/formatter-dollar'
+import { maskDollar } from 'app/shared/utils/masks/mask-dollar'
 
 import { TextDefault } from 'app/shared/components/texts/text-default/text-default.component'
 import { CardPercentageCrypto } from '../../../card-percentage-crypto/card-percentage-crypto.component'
@@ -29,9 +29,7 @@ const PriceCrypto: React.FC<PriceCryptoProps> = ({
 
   return (
     <Container>
-      <TextDefault variant="H2">
-        {formatterDollar.format(parsedNewPrice)}
-      </TextDefault>
+      <TextDefault variant="H2">{maskDollar(parsedNewPrice)}</TextDefault>
       <CardPercentageCrypto
         hasIncreased={parsedNewPrice > parsedOldPrice}
         hasKeep={parsedNewPrice === parsedOldPrice}
