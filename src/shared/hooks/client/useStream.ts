@@ -29,6 +29,8 @@ export function useStream({ symbol }: UseStreamProps) {
       })
 
       ws.send(message)
+
+      setisInitialLoading(false)
     }
 
     ws.onmessage = (e) => {
@@ -52,8 +54,6 @@ export function useStream({ symbol }: UseStreamProps) {
 
         return newData
       })
-
-      setisInitialLoading(false)
     }
 
     ws.onerror = (e) => {

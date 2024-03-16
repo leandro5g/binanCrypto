@@ -8,7 +8,8 @@ export const COLOR_LIGHT = {
   },
   BASE: {
     100: '#ffffff',
-    200: '#F9F9FB',
+    200: '#EFEFF0',
+    300: 'rgba(239, 239, 240, .7)',
   },
   DARK: {
     100: '#17171A',

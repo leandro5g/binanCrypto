@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import {
-  Easing,
   interpolate,
   useAnimatedStyle,
   useSharedValue,
@@ -12,8 +11,9 @@ import { TAB_BAR_MAP } from 'app/shared/config/constants/tab-bar-map'
 
 import { TabFocused } from './modules/tab-focused/tab-focused.module'
 
-import { Container, IconTab, ContentTabItem } from './custom-tab-item.styles'
 import { useTheme } from 'styled-components/native'
+
+import { Container, IconTab, ContentTabItem } from './custom-tab-item.styles'
 
 type CustomTabItemProps = {
   key: string
@@ -41,7 +41,7 @@ const CustomTabItem: React.FC<CustomTabItemProps> = ({
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
-      { scale: interpolate(scale.value, [0.5, 1.5], [0.5, 1.5]) },
+      { scale: interpolate(scale.value, [0.5, 1.4], [0.5, 1.4]) },
       { rotate: `${interpolate(rotate.value, [0, 360], [0, 360])}deg` },
     ],
   }))

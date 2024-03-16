@@ -1,10 +1,17 @@
-import React from 'react'
-import { View } from 'react-native'
+import { useRoute } from '@react-navigation/native'
 
-// import { Container } from './styles';
+import { AppHeader } from 'app/shared/components/headers/app-header/app-header.component'
+
+import { Container } from './mock.styles'
 
 const MockPage: React.FC = () => {
-  return <View />
+  const { name } = useRoute()
+
+  return (
+    <Container>
+      <AppHeader title={name} />
+    </Container>
+  )
 }
 
 export { MockPage }

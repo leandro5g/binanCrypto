@@ -39,7 +39,11 @@ const CardCrypto: React.FC<CardCryptoProps> = ({ data, index }) => {
   return (
     <ContainerAnimated index={index} onPress={onPressCardCrypto}>
       <InfoCrypto id={data?.id} name={data?.name} symbol={data?.symbol} />
-      <LineStickChart priceOpen={priceOpen} cryptoPrices={cryptoPrices} />
+      <LineStickChart
+        cryptoId={data?.id}
+        priceOpen={priceOpen}
+        cryptoPrices={cryptoPrices}
+      />
       <PriceCrypto prices={prices} changePercentage={data?.changePercent24Hr} />
       <ModalCryptoInfo data={data} ref={refModalCryptoInfo} />
     </ContainerAnimated>

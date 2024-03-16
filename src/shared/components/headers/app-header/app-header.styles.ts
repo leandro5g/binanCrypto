@@ -1,15 +1,28 @@
-import { RFValue } from 'app/shared/libs/font-size/font-size'
 import styled from 'styled-components/native'
 import { TextDefault } from '../../texts/text-default/text-default.component'
+import { BlurView } from 'expo-blur'
 
-export const Container = styled.View`
-  height: ${RFValue(80)}px;
-  width: 100%;
+import { FontAwesome } from '@expo/vector-icons'
+import { RFValue } from 'app/shared/libs/font-size/font-size'
+
+export const Container = styled(BlurView)`
   padding: 0px ${({ theme }) => theme.METRICS.PADDING.x24}px;
-  padding-bottom: ${({ theme }) => theme.METRICS.PADDING.x8}px;
-  justify-content: flex-end;
-  border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.COLORS.NEUTRAL[100]};
+  padding-bottom: ${({ theme }) => theme.METRICS.PADDING.x24 / 2}px;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: ${({ theme }) => theme.COLORS.BASE[300]};
+  flex-direction: row;
+  align-items: flex-end;
 `
 
-export const TitleHeader = styled(TextDefault)``
+export const TitleHeader = styled(TextDefault)`
+  font-size: ${({ theme }) => theme.METRICS.FONT_SIZE.x20}px;
+`
+
+export const IconNotification = styled(FontAwesome).attrs(({ theme }) => ({
+  size: RFValue(22),
+  color: theme.COLORS.BRAND[100],
+}))``

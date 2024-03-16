@@ -1,7 +1,11 @@
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
-import { Container } from './custom-tab-bar-container.styles'
 import { useCallback } from 'react'
+import { RFValue } from 'app/shared/libs/font-size/font-size'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
+
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
 import { CustomTabItem } from '../custom-tab-item/custom-tab-item.component'
+
+import { Container } from './custom-tab-bar-container.styles'
 
 type CustomTabBarContainerProps = BottomTabBarProps
 
@@ -10,8 +14,15 @@ const CustomTabBarContainer: React.FC<CustomTabBarContainerProps> = ({
   navigation,
   state,
 }) => {
+  const { bottom } = useSafeAreaInsets()
+
   return (
-    <Container intensity={40}>
+    <Container
+      intensity={15}
+      style={{
+        height: RFValue(60) + bottom,
+      }}
+    >
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key]
         const label = options.tabBarLabel ?? options.title ?? route.name

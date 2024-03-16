@@ -14,7 +14,7 @@ const BaseCandleStick: React.FC<BaseCandleStickProps> = ({ data }) => {
   return (
     <Container entering={FadeInUp.duration(500)}>
       <CandlestickChart.Provider data={data}>
-        <CandlestickChart height={METRICS.GLOBAL.height * 0.2}>
+        <CandlestickChart height={METRICS.GLOBAL.height * 0.22}>
           <CandlestickChart.Candles />
           <CandlestickChart.Crosshair>
             <CandlestickChart.Tooltip />

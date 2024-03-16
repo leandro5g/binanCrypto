@@ -5,17 +5,24 @@ import { useTheme } from 'styled-components/native'
 import { formatValuesGraphicLineStick } from 'app/modules/home/utils/masks/format-values-graphic-line-stick'
 
 import { Container } from './line-stick-chart.styles'
+import { CRYPTO_TINT_COLOR } from 'app/shared/config/constants/crypto-tint-color'
 
 type LineStickChartProps = {
   cryptoPrices: string[]
   priceOpen: number
+  cryptoId: string
 }
 
 const LineStickChart: React.FC<LineStickChartProps> = ({
   cryptoPrices,
   priceOpen,
+  cryptoId,
 }) => {
-  const { METRICS } = useTheme()
+  const { METRICS, COLORS } = useTheme()
+
+  const colorGraphic =
+    CRYPTO_TINT_COLOR?.[cryptoId as keyof typeof CRYPTO_TINT_COLOR] ??
+    COLORS.BRAND[100]
 
   const dataGraphic = formatValuesGraphicLineStick({
     cryptoPrices,
@@ -27,7 +34,7 @@ const LineStickChart: React.FC<LineStickChartProps> = ({
       {dataGraphic?.length >= 2 && (
         <LineChart.Provider data={dataGraphic}>
           <LineChart width={METRICS.GLOBAL.width * 0.2} height={RFValue(60)}>
-            <LineChart.Path></LineChart.Path>
+            <LineChart.Path color={colorGraphic}></LineChart.Path>
             <LineChart.CursorCrosshair>
               <LineChart.Tooltip />
             </LineChart.CursorCrosshair>

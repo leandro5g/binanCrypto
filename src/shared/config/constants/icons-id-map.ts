@@ -7,7 +7,11 @@ export const ICONS_ID_MAP = [
   'monero',
   'stellar',
   'ripple',
-  'tether',
   'tron',
-  'dogecoin',
+  'tezos',
+  'omisego',
+  'vechain',
+  'dash',
+  'ethereum-classic',
+  'cardano',
 ]
