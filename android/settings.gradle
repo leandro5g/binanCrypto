@@ -1,4 +1,4 @@
-rootProject.name = 'binanCrypto'
+rootProject.name = 'BinanCrypto'
 
 dependencyResolutionManagement {
   versionCatalogs {

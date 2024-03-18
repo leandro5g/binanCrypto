@@ -1,4 +1,4 @@
-package com.binancrypto
+package com.leandrodeveloper.binanCrypto
 
 import android.app.Application
 import android.content.res.Configuration
