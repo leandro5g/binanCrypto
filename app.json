@@ -1,13 +1,31 @@
 {
   "expo": {
-    "name": "binanCrypto",
+    "name": "BinanCrypto",
     "slug": "binanCrypto",
+    "icon": "./assets/icon.png",
     "version": "1.0.0",
+    "orientation": "portrait",
+    "backgroundColor": "#4B8E96",
     "assetBundlePatterns": [
       "**/*"
     ],
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "android": {
+      "package": "com.leandrodeveloper.binanCrypto"
+    },
+    "ios": {
+      "bundleIdentifier": "com.leandrodeveloper.binanCrypto"
+    }
+  },
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#4B8E96"
+  },
+  "adaptiveIcon": {
+    "foregroundImage": "./assets/icon.png",
+    "backgroundColor": "#4B8E96"
   }
 }

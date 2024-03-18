@@ -14,7 +14,11 @@ const CandleStickChart: React.FC<CandleStickChartProps> = ({ symbol }) => {
 
   return (
     <Container>
-      {isInitialLoading ? <Loading /> : <BaseCandleStick data={streamData} />}
+      {isInitialLoading && <Loading />}
+
+      {!isInitialLoading && streamData?.length > 0 && (
+        <BaseCandleStick data={streamData} />
+      )}
     </Container>
   )
 }

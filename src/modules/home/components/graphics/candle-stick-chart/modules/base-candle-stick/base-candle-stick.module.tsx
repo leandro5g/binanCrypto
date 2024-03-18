@@ -12,7 +12,7 @@ const BaseCandleStick: React.FC<BaseCandleStickProps> = ({ data }) => {
   const { METRICS } = useTheme()
 
   return (
-    <Container entering={FadeInUp.duration(500)}>
+    <Container entering={FadeInUp.duration(600)}>
       <CandlestickChart.Provider data={data}>
         <CandlestickChart height={METRICS.GLOBAL.height * 0.22}>
           <CandlestickChart.Candles />
