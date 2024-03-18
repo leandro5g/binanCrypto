@@ -19,7 +19,7 @@ type HeaderInfoCryptoProps = {
 
 const HeaderInfoCrypto: React.FC<HeaderInfoCryptoProps> = ({ data }) => {
   return (
-    <Container entering={FadeInUp.delay(200).duration(300)}>
+    <Container entering={FadeInUp.delay(200).duration(500)}>
       <Content>
         <CryptoIcon size="LG" cryptoId={data?.id as CryptoKeyIcon} />
         <ContainerIconCrypto>

@@ -8,6 +8,14 @@ type TextProps = {
 
 export const Text = styled.Text<TextProps>`
   ${({ variant }) =>
+    variant === 'H1' &&
+    css`
+      font-size: ${({ theme }) => theme.METRICS.FONT_SIZE.x32}px;
+      font-family: ${({ theme }) => theme.FONTS.PRIMARY[700]};
+      color: ${({ theme }) => theme.COLORS.BRAND[100]};
+    `}
+
+  ${({ variant }) =>
     variant === 'H2' &&
     css`
       font-size: ${({ theme }) => theme.METRICS.FONT_SIZE.X16}px;

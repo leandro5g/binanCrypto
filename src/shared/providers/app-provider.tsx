@@ -15,13 +15,15 @@ type AppProviderProps = {
 const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <ThemeProvider theme={THEME_LIGHT}>
-        <BottomSheetModalProvider>
-          <QueryClientProvider client={queryClient}>
-            {children}
-          </QueryClientProvider>
-        </BottomSheetModalProvider>
-      </ThemeProvider>
+      <SafeAreaProvider style={{ flex: 1 }}>
+        <ThemeProvider theme={THEME_LIGHT}>
+          <BottomSheetModalProvider>
+            <QueryClientProvider client={queryClient}>
+              {children}
+            </QueryClientProvider>
+          </BottomSheetModalProvider>
+        </ThemeProvider>
+      </SafeAreaProvider>
     </GestureHandlerRootView>
   )
 }
