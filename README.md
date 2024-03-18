@@ -134,6 +134,7 @@ O módulo Home é um exemplo da separação detalhada dentro do aplicativo:
 O diretório `Shared` contém elementos usados em todo o aplicativo:
 
 - **Design System**: Centralizado usando `styled-components`, permite um acesso uniforme e centralizado ao design system.
+  
   <img width="210" alt="Screenshot 2024-03-18 at 15 36 28" src="https://github.com/leandro5g/binanCrypto/assets/100235332/521db20f-ab53-49de-8992-cc6b63e5052a">
   
 - **Config**: Configurações gerais do aplicativo, como mapeamento de tab bars, lista pré-selecionada de criptomoedas e suas cores.
@@ -142,12 +143,14 @@ O diretório `Shared` contém elementos usados em todo o aplicativo:
 
 - **Hooks**: Hooks personalizados para chamadas de serviços via protocolos HTTP e WebSocket.
 
-  <img width="241" alt="Screenshot 2024-03-18 at 15 38 40" src="https://github.com/leandro5g/binanCrypto/assets/100235332/4aa45674-4baa-4cce-966e-d228adf08fc8">
+<img width="241" alt="Screenshot 2024-03-18 at 15 38 40" src="https://github.com/leandro5g/binanCrypto/assets/100235332/4aa45674-4baa-4cce-966e-d228adf08fc8">
 
 - **Libs**: Configurações de bibliotecas externas, como `react-query` e `axios` para requests HTTP, e `react-native-responsive-font-size` para auxiliar na responsividade.
+  
   <img width="241" alt="Screenshot 2024-03-18 at 15 40 07" src="https://github.com/leandro5g/binanCrypto/assets/100235332/97da21f7-76a6-43cb-9ece-e6ace2b720fb">
 
 - **Providers**: Centraliza serviços e bibliotecas que funcionam como provedores no contexto do React.
+
 <img width="598" alt="Screenshot 2024-03-18 at 15 42 13" src="https://github.com/leandro5g/binanCrypto/assets/100235332/571268a5-efe8-4bfe-9011-fa68a205dcc2">
 
 - **Routes**: Configurações das rotas globais do aplicativo.
