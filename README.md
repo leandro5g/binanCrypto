@@ -50,6 +50,23 @@ Para configurar e executar o BinanCrypto, você precisará dos seguintes pré-re
    yarn ios
    ```
 
+## APIs Utilizadas:
+
+No desenvolvimento deste aplicativo, integrei várias APIs externas para trazer informações em tempo real e dados detalhados sobre criptomoedas. Aqui estão as principais APIs utilizadas:
+
+### Coin Cap API v2
+- `/assets/`: Esta endpoint é utilizada para a listagem de criptomoedas pré-selecionadas exibidas na tela inicial. Através dela, obtemos informações atualizadas sobre as principais moedas digitais.
+  [Documentação da Coin Cap `/assets/`](https://docs.coincap.io/#89deffa0-ab03-4e0a-8d92-637a857d2c91)
+
+- `ws/prices`: Utilizo essa API WebSocket para receber atualizações em tempo real dos preços das criptomoedas. Isso permite que o aplicativo exiba as informações mais atuais sem a necessidade de recarregar a página.
+  [Documentação da Coin Cap `ws/prices`](https://docs.coincap.io/#37dcec0b-1f7b-4d98-b152-0217a6798058)
+
+### Binance API
+
+- `stream candlestick`: Esta API WebSocket é empregada para criar gráficos candlestick que mostram a variação do valor das moedas em tempo real. Esses gráficos são essenciais para usuários interessados em acompanhar as tendências do mercado e fazer análises técnicas.
+  [Documentação da Binance `stream candlestick`](https://binance-docs.github.io/apidocs/voptions/en/#kline-candlestick-streams)
+
+
 ## Tecnologicas utilizadas:
 
 - [Expo](https://expo.dev/) - Utilizado o expo bare workflow
@@ -69,7 +86,7 @@ o design system do aplicativo
 
 Através da API pública HTTP (`/assets/`) da Coin Cap, selecionei cuidadosamente as principais criptomoedas do mercado para incluir na lista.
 
-<img src="https://raw.githubusercontent.com/leandro5g/binanCrypto/main/assets/100235332/3ca5b3a5-f1b9-47ba-8f88-120104a69bc9" width="300">
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-18 at 16 14 59](https://github.com/leandro5g/binanCrypto/assets/100235332/649fe7c5-0ed6-40c4-8219-02321e269210)
 
 
 ### Valores em Tempo Real
