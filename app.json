@@ -9,6 +9,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4B8E96"
+    },
     "plugins": [
       "expo-font"
     ],
@@ -18,14 +23,5 @@
     "ios": {
       "bundleIdentifier": "com.leandrodeveloper.binanCrypto"
     }
-  },
-  "splash": {
-    "image": "./assets/splash.png",
-    "resizeMode": "contain",
-    "backgroundColor": "#4B8E96"
-  },
-  "adaptiveIcon": {
-    "foregroundImage": "./assets/icon.png",
-    "backgroundColor": "#4B8E96"
   }
 }
