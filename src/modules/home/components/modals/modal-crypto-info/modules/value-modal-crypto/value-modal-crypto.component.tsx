@@ -17,7 +17,8 @@ const ValueModalCrypto: React.FC<ValueModalCryptoProps> = ({ nameCripto }) => {
     state.cryptoPrices?.[keyCripto],
   ])
 
-  const parseCryptoPrice = parseFloat(cryptoPrices?.[cryptoPrices?.length - 1])
+  const priceCrypto = cryptoPrices?.[cryptoPrices?.length - 1]
+  const parseCryptoPrice = parseFloat(priceCrypto)
   const parseLastCryptoPrice = parseFloat(
     cryptoPrices?.[cryptoPrices?.length - 2],
   )
@@ -31,7 +32,7 @@ const ValueModalCrypto: React.FC<ValueModalCryptoProps> = ({ nameCripto }) => {
   return (
     <Container>
       <PriceCrypto style={{ color: colorPrice }} variant="H2">
-        {maskDollar(parseCryptoPrice, 6)}
+        {maskDollar(priceCrypto, 6)}
       </PriceCrypto>
     </Container>
   )

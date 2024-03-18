@@ -1,11 +1,11 @@
 import { AppProvider } from './shared/providers/app-provider'
 
-import { SplashScreen } from './modules/un-logged/pages/splash-screen/splash-screen.page'
+import { Routes } from './shared/routes'
 
 const MyApp: React.FC = () => {
   return (
     <AppProvider>
-      <SplashScreen />
+      <Routes />
     </AppProvider>
   )
 }

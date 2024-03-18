@@ -36,7 +36,7 @@ const LineStickChart: React.FC<LineStickChartProps> = ({
           <LineChart width={METRICS.GLOBAL.width * 0.2} height={RFValue(60)}>
             <LineChart.Path color={colorGraphic}></LineChart.Path>
             <LineChart.CursorCrosshair>
-              <LineChart.Tooltip />
+              <LineChart.Tooltip></LineChart.Tooltip>
             </LineChart.CursorCrosshair>
           </LineChart>
         </LineChart.Provider>

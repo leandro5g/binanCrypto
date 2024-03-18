@@ -16,6 +16,6 @@ export const Content = styled(AnimatedView)``
 
 export const TitleOnboarding = styled(TextDefault)`
   text-align: center;
-  color: ${({ theme }) => theme.COLORS.DARK[100]};
-  margin-top: ${({ theme }) => theme.METRICS.MARGIN.x12}px;
+  color: ${({ theme }) => theme.COLORS.BASE[100]};
+  font-size: ${({ theme }) => theme.METRICS.FONT_SIZE.x24}px;
 `

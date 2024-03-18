@@ -34,7 +34,7 @@ export function useWebSocket<T>({ urlConnect }: UseWebSocketProps) {
       setErrorSocket(true)
     }
 
-    const interval = setInterval(flushMessages, 3000)
+    const interval = setInterval(flushMessages, 4000)
 
     return () => {
       clearInterval(interval)

@@ -29,7 +29,7 @@ const PriceCrypto: React.FC<PriceCryptoProps> = ({
 
   return (
     <Container>
-      <TextDefault variant="H2">{maskDollar(parsedNewPrice)}</TextDefault>
+      <TextDefault variant="H2">{maskDollar(newPrice)}</TextDefault>
       <CardPercentageCrypto
         hasIncreased={parsedNewPrice > parsedOldPrice}
         hasKeep={parsedNewPrice === parsedOldPrice}

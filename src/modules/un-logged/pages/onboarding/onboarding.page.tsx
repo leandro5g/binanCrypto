@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { useTheme } from 'styled-components/native'
+import { StackActions, useNavigation } from '@react-navigation/native'
 
 import {
   NativeScrollEvent,
@@ -14,6 +15,8 @@ import { ItemCarousel } from './components/item-carousel/item-carousel.component
 import { Container, Carousel } from './onboarding.styles'
 
 const Onboarding: React.FC = () => {
+  const { dispatch } = useNavigation()
+
   const {
     METRICS: {
       GLOBAL: { width },
@@ -43,6 +46,8 @@ const Onboarding: React.FC = () => {
     if (nextIndex < 3) {
       scrollViewRef.current?.scrollTo({ x: nextIndex * width, animated: true })
       setCurrentIndex(nextIndex)
+    } else {
+      dispatch(StackActions.replace('TabRoutes'))
     }
   }, [currentIndex])
 

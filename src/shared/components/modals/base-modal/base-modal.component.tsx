@@ -53,7 +53,7 @@ const BaseModal = forwardRef<BaseModalRef, BaseModalProps>(
         containerStyle={{
           backgroundColor: 'rgba(0,0,0,.3)',
         }}
-        snapPoints={['5%', '46%']}
+        snapPoints={['46%', '46%']}
         backdropComponent={renderBackdrop}
         index={1}
         {...rest}

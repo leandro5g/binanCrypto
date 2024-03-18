@@ -29,7 +29,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ icon: Icon, isFocused }) => {
   useEffect(() => {
     opacity.value = withTiming(isFocused ? 1 : 0, { duration: 500 })
     offsetY.value = withTiming(isFocused ? 0 : INITIAL_OFFSET_Y, {
-      duration: 400,
+      duration: 300,
     })
   }, [isFocused])
 

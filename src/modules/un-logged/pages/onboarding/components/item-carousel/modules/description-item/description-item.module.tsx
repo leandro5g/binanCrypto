@@ -21,7 +21,7 @@ type DescriptionItemProps = {
 }
 
 const INITIAL_OFFSET_X = RFValue(-50)
-const DURATION_ANIMATION = 450
+const DURATION_ANIMATION = 350
 
 const DescriptionItem: React.FC<DescriptionItemProps> = ({
   description,
