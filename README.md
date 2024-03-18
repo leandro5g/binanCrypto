@@ -96,4 +96,62 @@ https://github.com/leandro5g/binanCrypto/assets/100235332/7e68bc75-b75a-4ee3-8e7
 
 **Observação:** O valor da moeda apresentado no modal vem diretamente da API em tempo real da CoinCap. No entanto, para construir o gráfico de candle, utilizo os dados fornecidos pela API de candle da Binance. É importante notar que pode ocorrer de o valor da moeda aumentar enquanto no gráfico de candle o valor diminui. Isso acontece porque utilizei dois serviços diferentes para fins de demonstração.
 
+## Arquitetura Utilizada
+
+No desenvolvimento deste aplicativo, adotei diversos conceitos e padrões de desenvolvimento, além de seguir as boas práticas.
+
+### Padrões de Desenvolvimento
+
+Implementei vários padrões de design, incluindo:
+
+- **Clean Code**: Empreguei princípios de Clean Code para tornar o código mais legível, simples e compreensível. Isso inclui nomeação clara de variáveis e funções, redução de complexidade das funções e hooks.
+- **DDD (Domain-Driven Design)**: Estruturei e separei o projeto em módulos seguindo conceitos do DDD. Cada módulo mantém seus próprios componentes, serviços, estados, páginas e regras específicas.
+- **SOLID**: Princípios de design orientado a objetos adotados para melhorar a manutenção e extensão do código.
+- **HOC (Higher-Order Components)**: Utilizei para reforçar a reutilização da lógica dos componentes, promovendo uma melhor abstração e separação de preocupações.
+- **Composition Pattern**: Adotado para permitir uma composição de componentes mais flexível e clara, facilitando a reutilização e a manutenção do código.
+
+
+### Estrutura do Módulo Home
+
+O módulo Home é um exemplo da separação detalhada dentro do aplicativo:
+
+- **Componentes**: Componentes específicos do módulo e não compartilhados com outros módulos.
+
+<img width="268" alt="Screenshot 2024-03-18 at 15 29 53" src="https://github.com/leandro5g/binanCrypto/assets/100235332/5dfe45f3-e515-4f47-9a3f-68cd430b1644">
+
+- **Models**: Definem as tipagens utilizadas no módulo.
+
+<img width="268" alt="Screenshot 2024-03-18 at 15 30 05" src="https://github.com/leandro5g/binanCrypto/assets/100235332/30395ccf-c6b3-4167-bfee-a9a8efffba9d">
+
+- **Services e Stores**: `Services` gerenciam lógicas e requests complexas. `Stores` mantêm as configurações e estados globais do módulo usando Zustand.
+  
+<img width="323" alt="Screenshot 2024-03-18 at 15 30 35" src="https://github.com/leandro5g/binanCrypto/assets/100235332/8a98fb2d-2c12-4cd2-9410-96a6d978ff43">
+
+- **Utils**: Funções auxiliares usadas dentro do módulo.
+
+### Shared: Componentes e Configurações Globais
+
+O diretório `Shared` contém elementos usados em todo o aplicativo:
+
+- **Design System**: Centralizado usando `styled-components`, permite um acesso uniforme e centralizado ao design system.
+  <img width="210" alt="Screenshot 2024-03-18 at 15 36 28" src="https://github.com/leandro5g/binanCrypto/assets/100235332/521db20f-ab53-49de-8992-cc6b63e5052a">
+  
+- **Config**: Configurações gerais do aplicativo, como mapeamento de tab bars, lista pré-selecionada de criptomoedas e suas cores.
+
+<img width="217" alt="Screenshot 2024-03-18 at 15 37 40" src="https://github.com/leandro5g/binanCrypto/assets/100235332/05b29a89-cb28-434c-9270-7eae46d44eb2">
+
+- **Hooks**: Hooks personalizados para chamadas de serviços via protocolos HTTP e WebSocket.
+
+  <img width="241" alt="Screenshot 2024-03-18 at 15 38 40" src="https://github.com/leandro5g/binanCrypto/assets/100235332/4aa45674-4baa-4cce-966e-d228adf08fc8">
+
+- **Libs**: Configurações de bibliotecas externas, como `react-query` e `axios` para requests HTTP, e `react-native-responsive-font-size` para auxiliar na responsividade.
+  <img width="241" alt="Screenshot 2024-03-18 at 15 40 07" src="https://github.com/leandro5g/binanCrypto/assets/100235332/97da21f7-76a6-43cb-9ece-e6ace2b720fb">
+
+- **Providers**: Centraliza serviços e bibliotecas que funcionam como provedores no contexto do React.
+<img width="598" alt="Screenshot 2024-03-18 at 15 42 13" src="https://github.com/leandro5g/binanCrypto/assets/100235332/571268a5-efe8-4bfe-9011-fa68a205dcc2">
+
+- **Routes**: Configurações das rotas globais do aplicativo.
+
+
+
 
