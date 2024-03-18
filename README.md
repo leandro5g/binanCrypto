@@ -1,8 +1,12 @@
-# App Binancrypto (Desafio Pratico Senior)
+# App Binancrypto (Desafio Pratico Sênior)
 
 O BinanCrypto é uma plataforma prática e intuitiva que criei para atender às necessidades de entusiastas e investidores de criptomoedas. Meu objetivo principal com este aplicativo é oferecer um recurso integrado que torne mais simples o monitoramento e a análise do mercado de criptomoedas em tempo real.
 
 Utilizei APIs públicas fornecidas pela Coin Cap e pela Binance para garantir que o aplicativo forneça atualizações instantâneas das principais criptomoedas. Com uma interface descomplicada, o BinanCrypto revela informações detalhadas, facilitando para os usuários a visualização e interpretação das flutuações do mercado.
+
+
+https://github.com/leandro5g/binanCrypto/assets/100235332/536fdb0a-1155-4059-b677-3994abd8a5cb
+
 
 ## Pré-Requisitos
 
