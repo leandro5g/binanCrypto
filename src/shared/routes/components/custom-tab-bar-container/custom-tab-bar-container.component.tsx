@@ -18,7 +18,7 @@ const CustomTabBarContainer: React.FC<CustomTabBarContainerProps> = ({
 
   return (
     <Container
-      intensity={15}
+      intensity={80}
       style={{
         height: RFValue(60) + bottom,
       }}

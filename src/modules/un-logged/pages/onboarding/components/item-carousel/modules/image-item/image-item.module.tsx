@@ -35,7 +35,7 @@ const ImageItem: React.FC<ImageItemProps> = ({ icon: Icon, isFocused }) => {
 
   return (
     <Container style={animatedStyle}>
-      <Icon width={400} height={300} />
+      <Icon width={300} height={300} />
     </Container>
   )
 }
