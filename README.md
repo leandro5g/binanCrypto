@@ -65,7 +65,7 @@ o design system do aplicativo
 
 Através da API pública HTTP (`/assets/`) da Coin Cap, selecionei cuidadosamente as principais criptomoedas do mercado para incluir na lista.
 
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-18 at 10 50 23](https://github.com/leandro5g/binanCrypto/assets/100235332/3ca5b3a5-f1b9-47ba-8f88-120104a69bc9)
+<img src="https://raw.githubusercontent.com/leandro5g/binanCrypto/main/assets/100235332/3ca5b3a5-f1b9-47ba-8f88-120104a69bc9" width="300">
 
 
 ### Valores em Tempo Real
