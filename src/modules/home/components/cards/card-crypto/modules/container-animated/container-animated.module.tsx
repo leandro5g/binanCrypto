@@ -15,7 +15,11 @@ const ContainerAnimated: React.FC<ContainerAnimatedProps> = ({
   ...rest
 }) => {
   return (
-    <Container entering={FadeInUp.delay(index * 100)} {...rest}>
+    <Container
+      activeOpacity={0.95}
+      entering={FadeInUp.delay(index * 100)}
+      {...rest}
+    >
       {children}
     </Container>
   )
